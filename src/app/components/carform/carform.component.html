@@ -1,0 +1,36 @@
+<div class="col-md-5 offset-md-4">
+    <div class="card">
+        <div class="card-body">
+            <form>
+                <div class="form-group">
+                    <input type="text" name="title" placeholder="Marca" class="form-control" [(ngModel)]="car.brand" autofocus>
+                    
+                </div>
+
+                <div class="form-group">
+                    <input type="text" name="Model" placeholder="Model" class="form-control" autofocus [(ngModel)]="car.model">
+                    
+                </div>
+                
+                <div class="form-group">
+                    <input type="number" name="year" placeholder="Año" class="form-control" autofocus [(ngModel)]="car.year">
+                    
+                </div>
+                
+                <div class="form-group">
+                    <input type="text" name="license place" placeholder="Placa" class="form-control" autofocus [(ngModel)]="car.licensePlate">
+                    
+                </div>
+                
+                <div class="form-group">
+                    <input type="text" name="state" placeholder="Estado" class="form-control" autofocus [(ngModel)]="car.state">
+                    
+                </div>
+
+                <button class="btn btn-success btn-block" (click)="edit ? updateCar() : saveCar()">
+                    Guardar
+                </button>
+            </form>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,40 @@
+<!-- Componente que renderiza la tabla de vehiculos -->
+
+<div class="col-sm-12">
+    <h1 class="text-center p-3">Flotilla De Vehículos</h1>
+    <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Marca</th>
+            <th scope="col">Modelo</th>
+            <th scope="col">Año</th>
+            <th scope="col">Placa</th>
+            <th scope="col">Estado</th>
+            <th scope="col"></th>
+            <th scope="col"><a class="btn btn-primary btn-circle btn-xl" routerLink="/cars" routerLinkActive="active"><i class="fas fa-plus-circle"></i></a></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let car of cars; let i=index">
+            <th scope="row">{{i+1}}</th>
+            <td>{{car.brand}}</td>
+            <td>{{car.model}}</td>
+            <td>{{car.year}}</td>
+            <td>{{car.licensePlate}}</td>
+            <td>{{car.state}}</td>
+            <td>
+                <a [routerLink]="['/cars', car.id]" class="btn btn-success btn-block" (click)='editCar(car.id)'>
+                    Editar
+                </a>
+            </td>
+            <td>
+                <button class="btn btn-danger" (click)="deleteCar(car.id)">
+                    <i class="far fa-trash-alt"></i>
+                </button>
+            </td>
+            
+          </tr>
+        </tbody>
+      </table>
+</div>

@@ -1,1 +1,17 @@
 /* You can add global styles to this file, and also import other style files */
+
+/* Configutaci+on del scroll */
+
+body::-webkit-scrollbar {
+    width: 0.25rem; }
+  
+  body::-webkit-scrollbar-track {
+    background: white; }
+  
+  body::-webkit-scrollbar-thumb {
+    background: skyblue; }
+  
+.position-negative{
+    margin-left: 175px;
+    z-index: 2;
+} 
